@@ -1,6 +1,12 @@
 DBT pipeline project:
 Datasource: Northwind DB (data)
 
+1) Download the "scripts e dados" folder, you will have the csv files that has all the data for this pipeline.;
+2) After creating a redshift cluster, run the "northwindddl.sql" inside of your cluster;
+3) upload all the .csv files inside of a S3 bucket, and then open the "copy.sql" file on text editor and change the bucket name, user and so on
+settings according to your account.
+4) run the "copy.ddl" (with your adjustments to fit your account) on redshift.
+
 This run this project you will need to create a DB and Schema using the DDL provided as DDL.sql
 You run the DDL code inside your DataWarehouse of choice (in this case: AWS Redshift, but it could've been Snowflake or GCP or Databricks)
 
