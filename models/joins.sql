@@ -41,7 +41,7 @@ WITH prod AS (
 
     SELECT 
     od.*,
-    ord.order_date,
+    ord.order_date AS order_date,
     ord.customer,
     ord.employee,
     ord.age,
@@ -52,4 +52,4 @@ WITH prod AS (
         ON (od.order_id = ord.order_id)
 )
 
-SELECT count(*) FROM final_join --os mesmos 2155 do redshift
+SELECT * FROM final_join --os mesmos 2155 do redshift
